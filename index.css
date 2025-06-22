@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: repeating-linear-gradient(0deg, #3a3a3a, #3a3a3a 1px, #4a4a4a 2px),
+    radial-gradient(circle at top left, #5a5a5a, #2a2a2a);
+  background-blend-mode: overlay;
+  color: white;
+}
+
+section {
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(232, 12, 12, 0.1);
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+h2 {
+  color: #d92525;
+}
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.9s ease;
+  -webkit-transition: transform 0.9s ease;
+  -moz-transition: transform 0.9s ease;
+  -ms-transition: transform 0.9s ease;
+  -o-transition: transform 0.9s ease;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.slide.ativo {
+  display: block;
+}
+
+.descricao {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+
+button.prev,
+button.next {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
+
+button.prev:hover ,
+button.next:hover {
+  background-color: #ff000070;
+}
+
+#contato_link {
+  color: #e60000; /* vermelho vibrante */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contato_link:hover {
+  color: #ff1a1a; /* vermelho um pouco mais claro */
+  text-decoration: underline;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+/* Scrollbar padrão para Chrome, Edge e Safari */
+::-webkit-scrollbar {
+  width: 10px; /* largura da barra lateral */
+}
+
+/* Fundo da scrollbar */
+::-webkit-scrollbar-track {
+  background: #1e1e1e; /* preto/cinza escuro */
+}
+
+/* Parte que se move */
+::-webkit-scrollbar-thumb {
+  background-color: #e60000; /* vermelho vibrante */
+  border-radius: 8px;
+  border: 2px solid #1e1e1e; /* borda para dar um destaque */
+}
+
+/* Ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff1a1a; /* vermelho um pouco mais claro */
+}

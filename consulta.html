@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta</title>
+    <link rel="shortcut icon" href="assets/Logomarca.png" />
+    <link rel="stylesheet" href="consulta.css" />
+    <link rel="stylesheet" href="Navbar/navbar.css" />
+  </head>
+  <body>
+    <header id="navbar-container"></header>
+
+    <main>
+      <h1 class="titulo-pagina">Consulta Geral</h1>
+
+      <div class="container-box">
+        <section>
+          <h2 class="titulo-secao">Clientes</h2>
+          <input
+            type="text"
+            id="filtroCliente"
+            class="filtro-input"
+            placeholder="Filtrar por nome..." />
+          <ul id="listaClientes" class="lista-resultado"></ul>
+        </section>
+
+        <section>
+          <h2 class="titulo-secao">Veículos</h2>
+          <input
+            type="text"
+            id="filtroVeiculo"
+            class="filtro-input"
+            placeholder="Filtrar por placa ou modelo..." />
+          <ul id="listaVeiculos" class="lista-resultado"></ul>
+        </section>
+
+        <section>
+          <h2 class="titulo-secao">Serviços</h2>
+          <input
+            type="text"
+            id="filtroServico"
+            class="filtro-input"
+            placeholder="Filtrar por data (AAAA-MM-DD)..." />
+          <ul id="listaServicos" class="lista-resultado"></ul>
+        </section>
+      </div>
+    </main>
+
+    <script src="consulta.js"></script>
+    <script src="Navbar/navbar.js"></script>
+  </body>
+</html>

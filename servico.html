@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Serviços - Bomba Motos</title>
+    <link rel="shortcut icon" href="assets/Logomarca.png" />
+    <link rel="stylesheet" href="servico.css" />
+    <link rel="stylesheet" href="Navbar/navbar.css" />
+  </head>
+  <body>
+    <header id="navbar-container"></header>
+
+    <main>
+      <section id="cadastro">
+        <div class="box">
+          <form action="PHP/cad-servico.php" method="POST">
+            <fieldset>
+              <legend><b>Serviços</b></legend>
+
+              <div class="inputBox">
+                <input type="text" name="placa" id="placa" class="inputUser" required />
+                <label for="placa" class="labelInput">Placa</label>
+              </div>
+
+              <div class="inputBox">
+                <input type="text" name="veiculo" id="veiculo" class="inputUser" required />
+                <label for="veiculo" class="labelInput">Veículo</label>
+              </div>
+
+              <div class="inputBox">
+                <input type="text" name="cliente" id="cliente" class="inputUser" required />
+                <label for="cliente" class="labelInput">Cliente</label>
+              </div>
+
+              <label for="data_entrada"><b>Data de Entrada:</b></label>
+              <input type="date" name="data_entrada" id="data_entrada" required />
+
+              <p>Tipo de Serviço:</p>
+              <input type="radio" name="servico" id="troca" value="troca" required />
+              <label for="troca">Troca Peças</label><br />
+
+              <input type="radio" name="servico" id="manutencao" value="manutencao" required />
+              <label for="manutencao">Manutenção</label><br />
+
+              <input type="radio" name="servico" id="revisao" value="revisao" required />
+              <label for="revisao">Revisão</label>
+
+              <div class="inputBox">
+                <input
+                  type="text"
+                  name="descricao"
+                  id="descricao"
+                  class="inputUser"
+                  required
+                />
+                <label for="descricao" class="labelInput">Descrição Serviço</label>
+              </div>
+
+              <div class="inputBox">
+                <input type="text" name="custo" id="custo" class="inputUser" required />
+                <label for="custo" class="labelInput">Custo</label>
+              </div>
+
+              <button type="submit" name="submit" id="submit"><b>Enviar</b></button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="cadastro.js"></script>
+    <script src="Navbar/navbar.js"></script>
+
+    <footer class="footer">
+      <p>&copy; 2025 Bomba Motos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="ind

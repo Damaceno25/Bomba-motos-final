@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Clientes - Bomba Motos</title>
+  <link rel="shortcut icon" href="../assets/Logomarca.png">
+  <link rel="stylesheet" href="cad-cliente.css">
+  <link rel="stylesheet" href="../Navbar/navbar.css">
+</head>
+<body>
+
+  <header>
+    <div class="top-bar">
+      <a href="../index.html">
+        <img src="../assets/Logomarca.png" alt="Logo Bomba Motos" class="logo" />
+      </a>
+      <nav>
+        <ul class="top-menu">
+          <li><a href="#">Suporte</a></li>
+          <li><a href="../Acesso/login.html">Entrar</a></li>
+          <li><a href="../Acesso/register.html">Registrar</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="header-container">
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../servico.html">Serviços</a></li>
+          <li class="has-submenu">
+            <a href="javascript:void(0)" onclick="toggleSubmenu()">Cadastro &#x25BC;</a>
+            <ul class="submenu" id="has-submenu">
+              <li><a href="cad-cliente.html">Clientes</a></li>
+              <li><a href="cad-veiculo.html">Veículos</a></li>
+            </ul>
+          </li>
+
+          <li class="has-submenu">
+            <a href="javascript:void(0)" onclick="toggleSubmenu('consulta-submenu')">Consultas &#x25BC;</a>
+            <ul class="submenu" id="consulta-submenu">
+              <li><a href="../Consultas/consul-cliente.html">Clientes</a></li>
+              <li><a href="../Consultas/consul-veiculo.html">Veículos</a></li>
+              <li><a href="../Consultas/consul-servico.html">Serviços</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../relatorio.html">Relatórios</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="box">
+      <form action="../PHP/cad-cliente.php" method="POST">
+
+        <fieldset>
+          <legend><b>Cadastro de Cliente</b></legend>
+          <br>
+
+          <div class="inputBox">
+            <input type="text" name="nome" id="nome" class="inputUser" required>
+            <label for="nome" class="labelInput">Nome Completo</label>
+          </div>
+
+          <div class="inputBox">
+            <input type="text" name="email" id="email" class="inputUser" required>
+            <label for="email" class="labelInput">E-mail</label>
+          </div>
+
+          <div class="inputBox">
+            <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+            <label for="telefone" class="labelInput">Telefone</label>
+          </div>
+
+          <div class="inputBox">
+            <input type="text" name="endereco" id="endereco" class="inputUser" required>
+            <label for="endereco" class="labelInput">Endereço</label>
+          </div>
+
+          <button type="submit" name="submit" id="submit"><b> Enviar </b></button>
+        </fieldset>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Bomba Motos. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
